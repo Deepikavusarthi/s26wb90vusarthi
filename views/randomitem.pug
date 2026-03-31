@@ -3,11 +3,11 @@ extends layout
 block content
   h1= title
 
-  - let image_names = ['zoo1.jpg', 'zoo2.jpg', 'zoo3.jpg', 'zoo4.jpg', 'zoo5.jpg']
+  - let image_names = ['img1.jpg', 'img2.jpg', 'img3.jpg', 'img4.jpg', 'img5.jpg']
 
   - for (let i = 0; i < 3; i++) {
-    - let pick = Math.floor(Math.random() * 5)
-    - let name = image_names[pick]
+    - let index = Math.floor(Math.random() * 5)
+    - let name = image_names[index]
 
     img(src=`/images/${name}` alt=`${name}` width="300" height="300")
   - }

@@ -28,7 +28,9 @@ app.use('/users', usersRouter);
 app.use('/zoos', zoosRouter);
 app.use('/grid', gridRouter);
 app.use('/selector', pickRouter);
-app.use('/selector', pickRouter);
+
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

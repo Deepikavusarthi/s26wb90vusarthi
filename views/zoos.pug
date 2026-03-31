@@ -2,4 +2,18 @@ extends layout
 
 block content
   h1= title
-  
+
+  -
+    let results = [
+      { name: "San Diego Zoo", city: "San Diego", animals: 12000 },
+      { name: "Bronx Zoo", city: "New York", animals: 6000 },
+      { name: "London Zoo", city: "London", animals: 20000 }
+    ]
+
+  .container-fluid
+    .row
+      each item in results
+        .col-sm-2
+          p Name: #{item.name}
+          p City: #{item.city}
+          p Animals: #{item.animals}

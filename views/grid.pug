@@ -15,9 +15,9 @@ block content
   else if cols < 2 || cols > 12
     p Error: cols must be between 2 and 12.
   else
-    table#outer
+    table#outer(border="1")
       - for (let i = 0; i < rows; i++) {
-        tr
+        tr#middle
           - for (let j = 0; j < cols; j++) {
             td= 2 * i - j
           - }

@@ -2,6 +2,7 @@ extends layout
 
 block content
   h1= title
+
   p rows #{query.rows} cols #{query.cols}
 
   - let rows = Number(query.rows)
@@ -16,7 +17,7 @@ block content
   else
     table#outer
       - for (let i = 0; i < rows; i++) {
-        tr#middle
+        tr
           - for (let j = 0; j < cols; j++) {
             td= 2 * i - j
           - }

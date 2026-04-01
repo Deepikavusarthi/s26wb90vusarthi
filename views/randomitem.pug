@@ -3,8 +3,10 @@ extends layout
 block content
   h1= title
 
-  - let image_names = ['zoo1.png', 'zoo2.png', 'zoo3.png', 'zoo4.png', 'zoo5.png']
+  // array of image names
+  - let image_names = ['zoo1.jpg', 'zoo2.jpg', 'zoo3.jpg', 'zoo4.jpg', 'zoo5.jpg']
 
+  // loop 3 times
   - for (let i = 0; i < 3; i++) {
     - let index = Math.floor(Math.random() * 5)
     - let name = image_names[index]

@@ -12,8 +12,14 @@ block content
 
   .container-fluid
     .row
-      each item in results
+      each item, index in results
         .col-sm-2
-          p Name: #{item.name}
-          p City: #{item.city}
-          p Animals: #{item.animals}
+          div(onclick=`buy(${index})`, style="cursor: pointer; border: 1px solid #ccc; padding: 10px; margin: 5px;")
+            p Name: #{item.name}
+            p City: #{item.city}
+            p Animals: #{item.animals}
+
+  script.
+    function buy(index) {
+      alert(`You purchased item ${index}.`);
+    }
